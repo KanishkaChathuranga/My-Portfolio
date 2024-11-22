@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>America - Land of the Free</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: #002868; 
+            color: white;
+            padding: 10px 20px;
+        }
+        
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        header nav ul li {
+            margin-left: 20px;
+        }
+        
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        
+        #hero {
+            background: url('images/flag.jpg') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            padding: 100px 20px;
+            background-color: darkgray;
+        }
+        
+        #hero h2 {
+            font-size: 2.5rem;
+            color: #333;
+            background-color: darkgrey;
+            padding: 10px;
+            margin: 50;
+        }
+        
+        
+        #history {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        #history h2 {
+            margin-bottom: 20px;
+            color: #002868;
+        }
+        
+        
+        .landmark-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .landmark img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .landmark h3 {
+            margin: 10px 0 5px;
+        }
+        
+        
+        #facts {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        #facts ul {
+            list-style: none;
+        }
+        
+        #facts li {
+            margin: 10px 0;
+        }
+        
+        
+        #contact {
+            padding: 50px 20px;
+            background-color: #002868;
+            color: white;
+            text-align: center;
+        }
+        
+        form input, form textarea, form button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        form button {
+            background: #ffcc00; /* Yellow */
+            color: #002868; /* Blue */
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        form button:hover {
+            background: #002868;
+            color: #ffcc00;
+        }
+        
+        
+        footer {
+            background: #002868;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+        }
+        
+        
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            #hero h2 {
+               
+                font-size: 2rem;
+            }
+        
+            .landmark-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        </style>
+
+    <header>
+        <nav>
+            <h1>America</h1>
+            <ul>
+                <li><a href="#history">History</a></li>
+                <li><a href="#landmarks">Landmarks</a></li>
+                <li><a href="#facts">Fun Facts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <section id="hero">
+        <h2>Welcome to America</h2>
+        <p>Explore the Land of the Free and the Home of the Brave!</p>
+    </section>
+
+    
+    <section id="history">
+        <h2>History</h2>
+        <p>The United States has a rich history, from its founding in 1776 to becoming one of the world’s leading nations.</p>
+    </section>
+
+    
+    <section id="landmarks">
+        <h2>Famous Landmarks</h2>
+        <div class="landmark-grid">
+            <div class="landmark">
+                <img src="images/statue_of_liberty.jpg" alt="Statue of Liberty">
+                <h3>Statue of Liberty</h3>
+                <p>An iconic symbol of freedom, located in New York Harbor.</p>
+            </div>
+            <div class="landmark">
+                <img src="images/golden_gate.jpg" alt="Golden Gate Bridge">
+                <h3>Golden Gate Bridge</h3>
+                <p>A marvel of engineering in San Francisco, California.</p>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="facts">
+        <h2>Fun Facts</h2>
+        <ul>
+            <li>The US is home to 50 states and over 330 million people.</li>
+            <li>There are 63 national parks, including Yellowstone and the Grand Canyon.</li>
+            <li>The bald eagle is the national bird and symbol of the United States.</li>
+        </ul>
+    </section>
+
+
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Description" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Explore America. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Details</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .search-container {
+            margin-top: 10px;
+        }
+        
+        #search-bar {
+            padding: 10px;
+            width: 60%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        #search-btn {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        #search-btn:hover {
+            background-color: #ff8a73;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        #results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .country-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .country-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .country-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .card-body h3 {
+            margin: 10px 0;
+            color: #0056b3;
+        }
+        
+        .card-body p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        
+        .card-body a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #ff6f61;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .card-body a:hover {
+            background-color: #ff8a73;
+        }
+        
+        
+        @media (max-width: 768px) {
+            #search-bar {
+                width: 80%;
+            }
+        }
+        </style>
+
+    <header>
+        <h1>Find Country Details</h1>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Enter country name...">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="results">
+          
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Country Explorer. All Rights Reserved.</p>
+    </footer>
+
+    <script>const searchBtn = document.getElementById('search-btn');
+        const searchBar = document.getElementById('search-bar');
+        const resultsSection = document.getElementById('results');
+        
+        searchBtn.addEventListener('click', () => {
+            const query = searchBar.value.trim();
+            if (query) {
+                fetchCountryData(query);
+            }
+        });
+        
+        function fetchCountryData(countryName) {
+            const url = `https://restcountries.com/v3.1/name/${countryName}`;
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) throw new Error('Country not found');
+                    return response.json();
+                })
+                .then(data => {
+                    displayCountryData(data);
+                })
+                .catch(error => {
+                    resultsSection.innerHTML = `<p>${error.message}</p>`;
+                });
+        }
+        
+        function displayCountryData(countries) {
+            resultsSection.innerHTML = ''; 
+            countries.forEach(country => {
+                const countryCard = `
+                    <div class="country-card">
+                        <img src="${country.flags.svg}" alt="Flag of ${country.name.common}">
+                        <div class="card-body">
+                            <h3>${country.name.common}</h3>
+                            <p><strong>Capital:</strong> ${country.capital ? country.capital[0] : 'N/A'}</p>
+                            <p><strong>Region:</strong> ${country.region}</p>
+                            <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
+                            <a href="https://www.google.com/maps?q=${country.name.common}" target="_blank">View on Maps</a>
+                        </div>
+                    </div>
+                `;
+                resultsSection.innerHTML += countryCard;
+            });
+        }
+        </script>
+</body>
+</html>

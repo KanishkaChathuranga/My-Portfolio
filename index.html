@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Hero Section</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+
+</head>
+
+<body>
+
+    <!-- header section -->
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">I'm Kanishka </h1>
+      <p class="hero-subtitle">A Web Developer & Designer Crafting Innovative Digital Experiences</p>
+     
+    </div>
+  </section>
+
+
+  <!-- About Me Section -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <!-- Profile Image -->
+      <div class="about-image">
+        <img height="270" width="310" src="img/my.JPG" alt="Your Profile Picture">
+      </div>
+
+      <!-- About Content -->
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm <span class="highlight">Kanishka</span>, a passionate web developer with a knack for creating
+          beautiful and functional web experiences. I specialize in front-end development, bringing designs to life with
+          clean, responsive code. My goal is to make the web a more accessible and engaging place for everyone.
+        </p>
+        
+  </section>
+
+
+  <!-- project Section -->
+  <section id="portfolio" class="portfolio-section">
+    <h2 class="portfolio-title"> Projects</h2>
+    <div class="portfolio-grid">
+      <!-- Project 1 -->
+      <div class="portfolio-card" data-project="Project 1">
+        <img src="img/web.webp" alt="Project 1">
+        <div class="portfolio-card-body">
+          <h3>Web_Design</h3>
+          <p>This project focuses on creating modern, responsive, and visually engaging web designs that provide an
+            optimal user experience across all devices. Using a combination of HTML5, CSS3, and JavaScript, the design
+            emphasizes seamless navigation, interactive elements, and a clean, professional aesthetic.</p>
+
+          <a href="web_design/web.html" class="btn-dark">View Details</a>
+
+
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="portfolio-card" data-project="Project 2">
+        <img src="img/country_search.jpg" alt="Project 2">
+        <div class="portfolio-card-body">
+          <h3>Country_Search</h3>
+          <p>The Country Search web application allows users to easily find and explore detailed information about
+            countries worldwide. The application uses an intuitive and responsive design to deliver a seamless
+            experience across devices, from desktops to smartphones.Users can quickly search for a country by name using
+            a simple text input field.</p>
+          <a href="country_search/country.html" class="btn-dark">View Details</a>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="portfolio-card" data-project="Project 3">
+        <img src="img/Design portfolioen.png" alt="Project 3">
+        <div class="portfolio-card-body">
+          <h3>Design_Portfolio</h3>
+          <p>This Personal Portfolio website showcases professional skills, projects,providing
+            clients and employers with a comprehensive overview of my work. Designed with a focus on
+            creativity, usability, and responsiveness, the portfolio effectively highlights my abilities as a web
+            developer and designer.</p>
+            <a href="Design_portfolio/index.html" class="btn-dark">View Details</a>
+
+        </div>
+      </div>
+    </div>
+    <!-- Modal for Viewing Project Details -->
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="projectModalTitle"></h3>
+        <p id="projectModalDescription">More details about the project go here.</p>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section id="testimonials" class="testimonials-section">
+    <h2 class="section-title">What People Say</h2>
+    <div class="testimonial-slider">
+      
+      <div class="testimonial active">
+        <p class="testimonial-text">"This developer is incredibly talented and always delivers top-notch work!"</p>
+        <h4 class="testimonial-author">- Jane Doe</h4>
+      </div>
+      
+      <div class="testimonial">
+        <p class="testimonial-text">"Amazing attention to detail and dedication to the project!"</p>
+        <h4 class="testimonial-author">- John Smith</h4>
+      </div>
+     
+      <div class="testimonial">
+        <p class="testimonial-text">"Highly recommended for any web development needs!"</p>
+        <h4 class="testimonial-author">- Sarah Lee</h4>
+      </div>
+    </div>
+    <!-- Navigation Buttons -->
+    <div class="testimonial-nav">
+      <button class="prev-btn">&larr;</button>
+      <button class="next-btn">&rarr;</button>
+    </div>
+  </section>
+
+  <!-- Skills & Tools Section -->
+  <section id="skills-tools" class="skills-tools-section">
+    <h2 class="section-title">Skills & Tools</h2>
+
+    <div class="skills-container">
+      <!-- Skill 1 -->
+      <div class="skill">
+        <h4>HTML & CSS</h4>
+        <div class="progress-bar">
+          <div class="progress" style="width: 90%"></div>
+        </div>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="skill">
+        <h4>JavaScript</h4>
+        <div class="progress-bar">
+          <div class="progress" style="width: 80%"></div>
+        </div>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="skill">
+        <h4>React</h4>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%"></div>
+        </div>
+      </div>
+
+      <!-- Skill 4 -->
+      <div class="skill">
+        <h4>Python</h4>
+        <div class="progress-bar">
+          <div class="progress" style="width: 85%"></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="tools-title">Tools I Use</h3>
+    <div class="tools-container">
+      <div class="tool"><img src="img/vs.jpg" alt="VS Code" title="VS Code"></div>
+      <div class="tool"><img src="img/github.jpg.webp" alt="GitHub" title="GitHub"></div>
+      <div class="tool"><img src="img/node.webp" alt="Node.js" title="Node.js"></div>
+      <div class="tool"><img src="img/figma.jpg" alt="Figma" title="Figma"></div>
+    </div>
+  </section>
+
+  
+  <section id="cta" class="cta-section">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to Start Your Project?</h2>
+      <p class="cta-text">Let’s bring your ideas to life. Get in touch today and let’s create something amazing
+        together!</p>
+      <a href="#contact" class="cta-button">Contact Me</a>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-description">Have a question or want to work together? Send me a message below!</p>
+
+    <form id="contact-form" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <a href="#about">About Me</a>
+        <a href="#portfolio">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="social-icons">
+        <a href="https://github.com/KanishkaChathuranga?tab=repositories" target="_blank" aria-label="GitHub">
+          <i class="fa fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kanishka-chathuranga-6337492b5/" target="_blank" aria-label="LinkedIn">
+          <i class="fa fa-linkedin"></i>
+        </a>
+
+        <a <a href="https://www.facebook.com/profile.php?id=100075856447251" target="_blank" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="white"
+              d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.407.593 24 1.325 24h11.49v-9.294h-3.2v-3.622h3.2v-2.66c0-3.14 1.855-4.86 4.741-4.86 1.375 0 2.57.101 2.913.146v3.23h-2.071c-1.628 0-2.014.774-2.014 1.876v2.415h4.028l-.525 3.622h-3.503V24h6.675c.733 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+          </svg>
+
+
+
+      </div>
+
+   
+      <p class=" footer-copyright">
+        &copy; 2024 Kanishka. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+
+
+
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script> -->
+
+</body>
+
+</html>
